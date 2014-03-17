@@ -29,7 +29,12 @@ public class GuiTrial extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
         FAbutt = new javax.swing.JToggleButton();
+        cboxPorts = new javax.swing.JComboBox();
+        connect = new javax.swing.JButton();
+
+        jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -40,32 +45,46 @@ public class GuiTrial extends javax.swing.JFrame {
             }
         });
 
+        cboxPorts.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        connect.setText("connect");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addComponent(FAbutt)
-                .addContainerGap(284, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 203, Short.MAX_VALUE)
+                .addComponent(connect)
+                .addGap(0, 10, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(cboxPorts, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(FAbutt)
-                .addContainerGap(249, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(cboxPorts, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(FAbutt)
+                    .addComponent(connect))
+                .addContainerGap(240, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+   
     private void FAbuttActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FAbuttActionPerformed
     if(FAbutt.isSelected()){
         FAbutt.setBackground(Color.red);
         FAbutt.setText("FA MSG on");
         
-       //SerialPort serialPort = new SerialPort("COM1"); 
+       
         // TODO add your handling code here:
     }//GEN-LAST:event_FAbuttActionPerformed
 else
@@ -108,7 +127,34 @@ else
             }
         });
     }
+   
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton FAbutt;
+    public static javax.swing.JComboBox cboxPorts;
+    private javax.swing.JButton connect;
+    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
+
+    public String string;
+
+    /**
+     * Get the value of string
+     *
+     * @return the value of string
+     */
+    public String getString() {
+        return string;
+    }
+
+    /**
+     * Set the value of string
+     *
+     * @param string new value of string
+     */
+    public void setString(String string) {
+        this.string = string;
+    }
+
+
 }
